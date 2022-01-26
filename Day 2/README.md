@@ -10,4 +10,3 @@
 * WAP to print first x terms of the series 3N + 2 which are not multiples of 4.
 * WAP to generate the reverse of a given number N.
 * Given a binary number convert it into decimal.
-* WAP to check whenther a number is a palindrome or not.

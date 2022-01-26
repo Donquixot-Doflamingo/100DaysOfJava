@@ -83,17 +83,6 @@ public class Day2{
         //     n /= 10;
         // }
         // System.out.println(decimal_num);
-
-        // WAP to check whenther a number is a palindrome or not
-        // int rev = 0;
-        // for(int i=n;i>0;){
-        //     int last_num = i%10;
-        //     i /= 10;
-        //     rev = (rev * 10) + last_num;
-        // }
-        // if(rev == n){
-        //     System.out.println("Number is a palindrone");
-        // }
         s.close();
     }
 }
