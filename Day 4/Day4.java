@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class Day4 {
     public static void main(String[] args) {
         // print celcius value from n to N with interval of S
+        int n = 5;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter the starting no");
         int entry = s.nextInt();
