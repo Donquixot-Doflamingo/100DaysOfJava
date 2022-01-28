@@ -12,12 +12,12 @@ public class Day6 {
         // *****
         // *****
         // *****
-        // for(int i =1; i<=n; i++){
-        //     for(int j = 1; j<=n ; j++){
-        //         System.out.print("*");
-        //     }
-        //     System.out.println();
-        // }
+        for(int i =1; i<=n; i++){
+            for(int j = 1; j<=n ; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
 
         // 1111
         // 2222
