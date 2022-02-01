@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Day15 {
     //taking the user input in array
     public static int[][] takingInput(){
