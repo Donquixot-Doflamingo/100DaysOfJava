@@ -2,7 +2,7 @@
 
 ## Day 13
 
-### Tried solving following questions
+### Tried solving complex arrays questions
 
 * Rotate the array by one position in clock-wise direction
 * Print the max value in the subarray

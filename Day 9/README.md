@@ -2,7 +2,7 @@
 
 ## Day 9
 
-### Tried solving following questions
+### Learnt about arrays and scopes in Java
 
 * Learnt about arrays in java
 * Learnt about variable scope in java

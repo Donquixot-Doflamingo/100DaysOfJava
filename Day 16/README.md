@@ -2,7 +2,7 @@
 
 ## Day 16
 
-### Tried solving following questions
+### Learnt about searching algorithms in Java
 
 * Learn about the searching algorithms
 * Binary search algorithm

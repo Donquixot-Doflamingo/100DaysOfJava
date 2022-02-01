@@ -2,7 +2,7 @@
 
 ## Day 15
 
-### Tried solving following questions
+### Started learning about 2D arrays and solved its questions
 
 * Learnt about 2D arrays
 * Taking the user input and print the 2D array

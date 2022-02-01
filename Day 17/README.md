@@ -1,8 +1,8 @@
 # 100DaysOfJava
 
-## Day 16
+## Day 17
 
-### Tried solving following questions
+### Learnt about sorting in Java
 
 * Add two arrays considering array
 * Sorting 0 1 2

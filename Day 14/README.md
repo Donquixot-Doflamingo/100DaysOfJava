@@ -2,7 +2,7 @@
 
 ## Day 14
 
-### Tried solving following questions
+### Tried solving complex array questions
 
 * Kadane's Algo 
 * Next permutation, rearrange the lexicographically next greater permutation

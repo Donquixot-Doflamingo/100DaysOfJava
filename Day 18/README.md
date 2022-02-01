@@ -1,8 +1,8 @@
 # 100DaysOfJava
 
-## Day 16
+## Day 18
 
-### Tried solving following questions
+### Started learning about complexities in Java
 
 * Learnt about Merger sorting
 * Learnt about complexity in java
