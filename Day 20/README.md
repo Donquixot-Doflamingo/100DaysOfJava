@@ -1,6 +1,6 @@
 # 100DaysOfJava
 
-## Day 19
+## Day 20
 
 ### Started learning about Strings in Java and solved soe questions
 
