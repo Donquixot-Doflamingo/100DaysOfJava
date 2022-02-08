@@ -2,7 +2,7 @@
 
 ## Day 20
 
-### Started learning about Strings in Java and solved soe questions
+### Started learning about Strings in Java and solved some questions
 
 * Learnt about basics of how Strings work in java
 * Print no of chars in strings
