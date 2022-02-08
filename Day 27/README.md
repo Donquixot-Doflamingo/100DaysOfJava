@@ -2,7 +2,7 @@
 
 ## Day 27
 
-### Started learning about Recursions and Strating assignment
+### Started learning about Recursions and Starting assignment
 
 * Print the sum of the elements present in the number
 * Remove a paricular character in he sring
