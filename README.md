@@ -36,17 +36,37 @@ In this I took the challenge of 100 days of java programming where I learn java 
 * -> Day 33 -: Solved assignment 3 of recursion
 * -> Day 34 -: Learnt about classes and object in Java
 * -> Day 35 -: Learnt about BackTracking in Java
-* -> Day 36 -: 
-* -> Day 37 -: 
-* -> Day 39 -: 
-* -> Day 40 -: 
-* -> Day 41 -:
-* -> Day 42 -:
-* -> Day 43 -:
-* -> Day 44 -:
-* -> Day 45 -: 
-* -> Day 46 -:
-* -> Day 47 -:
-* -> Day 48 -:
-* -> Day 49 -:
-* -> Day 50 -:
+* -> Day 36 -: Solved some Questions on GFGs 
+* -> Day 37 -: Solved some Questions on GFGs 
+* -> Day 39 -: Solved some Questions on GFGs 
+* -> Day 40 -: Solved some Questions on GFGs 
+* -> Day 41 -: Solved some Questions on GFGs 
+* -> Day 42 -: Solved some Questions on GFGs 
+* -> Day 43 -: Solved some Questions on GFGs 
+* -> Day 44 -: Solved some Questions on GFGs 
+* -> Day 45 -: Solved some Questions on GFGs 
+* -> Day 46 -: Solved some Questions on GFGs 
+* -> Day 47 -: Solved some Questions on GFGs 
+* -> Day 48 -: Solved some Questions on GFGs 
+* -> Day 49 -: Solved some Questions on GFGs 
+* -> Day 50 -: Solved some Questions on GFGs 
+* -> Day 51 -: 
+* -> Day 52 -: 
+* -> Day 53 -: 
+* -> Day 54 -: 
+* -> Day 55 -: 
+* -> Day 56 -: 
+* -> Day 57 -: 
+* -> Day 58 -: 
+* -> Day 59 -: 
+* -> Day 60 -: 
+* -> Day 61 -: 
+* -> Day 62 -: 
+* -> Day 63 -: 
+* -> Day 64 -: 
+* -> Day 65 -: 
+* -> Day 66 -: 
+* -> Day 67 -: 
+* -> Day 68 -: 
+* -> Day 69 -: 
+* -> Day 70 -: 
