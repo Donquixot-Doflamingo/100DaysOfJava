@@ -1,4 +1,13 @@
+class Node<T> {
+    T data;
+    Node<T> next;
 
+    Node(T data){
+        this.data = data;
+        // this isn't required cause the defult value of any reference is null
+        // next = null;
+    }
+}
 
 public class Day56 {
     /* Question 1 -> Segregate 0s and 1s
