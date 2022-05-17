@@ -64,7 +64,7 @@ In this I took the challenge of 100 days of java programming where I learn java 
 * -> Day 62 -: Solving Assignment of Linked List Part 2 
 * -> Day 63 -: Starting new data structure - STACKS
 * -> Day 64 -: Starting new data structure - STACKS - Part 2
-* -> Day 65 -: 
+* -> Day 65 -: Solved assignment on stacks
 * -> Day 66 -: 
 * -> Day 67 -: 
 * -> Day 68 -: 
