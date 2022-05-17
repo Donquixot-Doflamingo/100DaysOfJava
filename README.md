@@ -50,19 +50,19 @@ In this I took the challenge of 100 days of java programming where I learn java 
 * -> Day 48 -: Solved some Questions on GFGs 
 * -> Day 49 -: Solved some Questions on GFGs 
 * -> Day 50 -: Solved some Questions on GFGs 
-* -> Day 51 -: 
-* -> Day 52 -: 
-* -> Day 53 -: 
-* -> Day 54 -: 
-* -> Day 55 -: 
-* -> Day 56 -: 
-* -> Day 57 -: 
-* -> Day 58 -: 
-* -> Day 59 -: 
-* -> Day 60 -: 
-* -> Day 61 -: 
-* -> Day 62 -: 
-* -> Day 63 -: 
+* -> Day 51 -: Solved some questions on GFG
+* -> Day 52 -: Solved some questions on GFG
+* -> Day 53 -: Solved some questions on GFG and restarted course
+* -> Day 54 -: Solved some questions on GFG and continued course
+* -> Day 55 -: Started learning Array List in Java
+* -> Day 56 -: Solved assignment of ArrayList and started learning linked list
+* -> Day 57 -: Started Learning basics of Linked List
+* -> Day 58 -: Started Assignment of Linked List
+* -> Day 59 -: Solving Assignment of Linked List
+* -> Day 60 -: Solving Assignment of Linked List
+* -> Day 61 -: Started Linked List Part 2 
+* -> Day 62 -: Solving Assignment of Linked List Part 2 
+* -> Day 63 -: Starting new data structure - STACKS
 * -> Day 64 -: 
 * -> Day 65 -: 
 * -> Day 66 -: 
