@@ -65,8 +65,8 @@ In this I took the challenge of 100 days of java programming where I learn java 
 * -> Day 63 -: Starting new data structure - STACKS
 * -> Day 64 -: Starting new data structure - STACKS - Part 2
 * -> Day 65 -: Solved assignment on stacks
-* -> Day 66 -: 
-* -> Day 67 -: 
+* -> Day 66 -: Started learning about queues using array in Java 
+* -> Day 67 -: Learnt different implementations of Queues
 * -> Day 68 -: 
 * -> Day 69 -: 
 * -> Day 70 -: 
