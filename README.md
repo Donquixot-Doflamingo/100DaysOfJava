@@ -68,5 +68,5 @@ In this I took the challenge of 100 days of java programming where I learn java 
 * -> Day 66 -: Started learning about queues using array in Java 
 * -> Day 67 -: Learnt different implementations of Queues
 * -> Day 68 -: Completing the learning of Queues
-* -> Day 69 -: 
+* -> Day 69 -: Completed the assignment of Queues
 * -> Day 70 -: 
