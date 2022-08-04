@@ -69,4 +69,4 @@ In this I took the challenge of 100 days of java programming where I learn java 
 * -> Day 67 -: Learnt different implementations of Queues
 * -> Day 68 -: Completing the learning of Queues
 * -> Day 69 -: Completed the assignment of Queues
-* -> Day 70 -: 
+* -> Day 70 -: Started learning about Binary search Tree part 1
