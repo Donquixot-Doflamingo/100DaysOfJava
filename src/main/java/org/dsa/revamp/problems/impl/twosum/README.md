@@ -25,12 +25,19 @@ Your objective (without detailing the solution logic here) is to **identify a pa
 ---
 
 ### ✅ Input Examples (Without Solutions)
+| Input                | Target | Expected Output Format | Why This Is Important                  |
+| -------------------- | ------ | ---------------------- | -------------------------------------- |
+| [2, 7, 11, 15]       | 9      | [0, 1]                 | Basic case                             |
+| [3, 2, 4]            | 6      | [1, 2]                 | Normal case with middle elements       |
+| [3, 3]               | 6      | [0, 1]                 | Duplicate numbers                      |
+| [-1, -2, -3, -4, -5] | -8     | [2, 4]                 | Negative numbers                       |
+| [0, 4, 3, 0]         | 0      | [0, 3]                 | Zero values                            |
+| [1, 2, 3, 4, 5]      | 10     | []                     | No valid pair exists                   |
+| [5, 5, 5, 5]         | 10     | [0, 1]                 | Multiple duplicates — first valid pair |
+| [1, 2]               | 3      | [0, 1]                 | Minimum length array                   |
+| [2, 7, 11, 15]       | 26     | [2, 3]                 | Sum with last two elements             |
+| [-3, 4, 3, 90]       | 0      | [0, 2]                 | Mix of negative and positive numbers   |
 
-| Input          | Target | Expected Output Format |
-| -------------- | ------ |------------------------|
-| [2, 7, 11, 15] | 9      | [0, 1]                 |
-| [3, 2, 4]      | 6      | [1, 2]                 |
-| [3, 3]         | 6      | [0, 1]                 |
 
 ---
 

@@ -46,8 +46,51 @@ public class TwoSumProblem implements ProblemTest<TwoSumInput, int[]> {
                 "Negative numbers: [-1,-2,-3,-4,-5], target=-8"
         ));
 
+        // Test Case 5
+        testCases.add(new TestCase<>(
+                new TwoSumInput(new int[]{0, 4, 3, 0}, 0),
+                new int[]{0, 3},
+                "Zero values: [0,4,3,0], target=0"
+        ));
+
+        // Test Case 6
+        testCases.add(new TestCase<>(
+                new TwoSumInput(new int[]{1, 2, 3, 4, 5}, 10),
+                new int[]{},
+                "No valid pair: [1,2,3,4,5], target=10"
+        ));
+
+        // Test Case 7
+        testCases.add(new TestCase<>(
+                new TwoSumInput(new int[]{5, 5, 5, 5}, 10),
+                new int[]{0, 1},
+                "Multiple duplicates: [5,5,5,5], target=10"
+        ));
+
+        // Test Case 8
+        testCases.add(new TestCase<>(
+                new TwoSumInput(new int[]{1, 2}, 3),
+                new int[]{0, 1},
+                "Minimum length array: [1,2], target=3"
+        ));
+
+        // Test Case 9
+        testCases.add(new TestCase<>(
+                new TwoSumInput(new int[]{2, 7, 11, 15}, 26),
+                new int[]{2, 3},
+                "Sum with last two elements: [2,7,11,15], target=26"
+        ));
+
+        // Test Case 10
+        testCases.add(new TestCase<>(
+                new TwoSumInput(new int[]{-3, 4, 3, 90}, 0),
+                new int[]{0, 2},
+                "Mix of negative and positive numbers: [-3,4,3,90], target=0"
+        ));
+
         return testCases;
     }
+
 
     @Override
     public int[] solveProblem(TwoSumInput input) {
