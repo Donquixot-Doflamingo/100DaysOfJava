@@ -1,3 +1,4 @@
+package org.dsa.Old.Day6;
 import java.util.Scanner;
 
 // package Day6;

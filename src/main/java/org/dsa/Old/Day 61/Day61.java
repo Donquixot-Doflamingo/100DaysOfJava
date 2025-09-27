@@ -1,10 +1,10 @@
 import java.util.*;
 
-class Node<T> {
+class Node61<T> {
     T data;
-    Node<T> next;
+    Node61<T> next;
 
-    Node(T data){
+    Node61(T data){
         this.data = data;
         // this isn't required cause the defult value of any reference is null
         // next = null;
@@ -15,7 +15,7 @@ public class Day61 {
 
     // PreRequisites
         // To print all the nodes in the linked list
-        public static void printNodes(Node<Integer> head){
+        public static void printNodes(Node61<Integer> head){
             while(head != null){
                 System.out.print(head.data + " ");
                 head = head.next;
@@ -23,12 +23,12 @@ public class Day61 {
         }
         
         // to take input from the user of the LL - O(n)
-        public static Node<Integer> takeLinkedListInput(){
+        public static Node61<Integer> takeLinkedListInput(){
             Scanner s = new Scanner(System.in);
             int data = s.nextInt();
-            Node<Integer> head = null, tail = null;
+            Node61<Integer> head = null, tail = null;
             while(data != -1){
-                Node<Integer> currentNode = new Node<Integer>(data);
+                Node61<Integer> currentNode = new Node61<Integer>(data);
                 // check if it is the first node and make it head
                 if(head == null){
                     head = currentNode;
@@ -44,15 +44,15 @@ public class Day61 {
             return head;
         }
     
-        public static Node<Integer> createLinkedList(){
-            Node<Integer> n1 = new Node<Integer>(2);
-            Node<Integer> n2 = new Node<Integer>(4);
-            Node<Integer> n3 = new Node<Integer>(6);
-            Node<Integer> n4 = new Node<Integer>(8);
-            Node<Integer> n5 = new Node<Integer>(10);
-            Node<Integer> n6 = new Node<Integer>(12);
-            Node<Integer> n7 = new Node<Integer>(14);
-            Node<Integer> n8 = new Node<Integer>(16);
+        public static Node61<Integer> createLinkedList(){
+            Node61<Integer> n1 = new Node61<Integer>(2);
+            Node61<Integer> n2 = new Node61<Integer>(4);
+            Node61<Integer> n3 = new Node61<Integer>(6);
+            Node61<Integer> n4 = new Node61<Integer>(8);
+            Node61<Integer> n5 = new Node61<Integer>(10);
+            Node61<Integer> n6 = new Node61<Integer>(12);
+            Node61<Integer> n7 = new Node61<Integer>(14);
+            Node61<Integer> n8 = new Node61<Integer>(16);
             n1.next = n2;
             n2.next = n3;
             n3.next = n4;
@@ -101,10 +101,10 @@ public class Day61 {
         2
     */
     
-    public static Node<Integer> midPointOfLL(Node<Integer> head){
+    public static Node61<Integer> midPointOfLL(Node61<Integer> head){
         if(head == null) return head;
-        Node<Integer> slow = head;
-        Node<Integer> fast = head;
+        Node61<Integer> slow = head;
+        Node61<Integer> fast = head;
         while(fast.next != null && fast.next.next !=null){
             slow = slow.next;
             fast = fast.next.next;
@@ -156,11 +156,11 @@ public class Day61 {
         10 10 20 30 40 40 50 60 60 60 80 90 100
     */
     
-    public static Node<Integer> mergeTwoSortedLL(Node<Integer> t1, Node<Integer> t2){
+    public static Node61<Integer> mergeTwoSortedLL(Node61<Integer> t1, Node61<Integer> t2){
         if(t1 == null) return t2;
         if(t2 == null) return t1;
 
-        Node<Integer> head = null, tail = null;
+        Node61<Integer> head = null, tail = null;
         if(t1.data>t2.data) {
             head = t2;
             t2 = t2.next;
@@ -225,12 +225,12 @@ public class Day61 {
         -5 1 5 9 10 67 89 90  
     */
     
-    public static Node<Integer> mergeSort(Node<Integer> head){
+    public static Node61<Integer> mergeSort(Node61<Integer> head){
         if(head == null || head.next == null) return head;
 
         // split the list into two parts using mid point
-        Node<Integer>  mid = midPointOfLL(head);
-        Node<Integer> part1Head = head, part2Head = mid.next;
+        Node61<Integer>  mid = midPointOfLL(head);
+        Node61<Integer> part1Head = head, part2Head = mid.next;
         mid.next = null;
 
         // performing spliting on two half lists
@@ -262,7 +262,7 @@ public class Day61 {
     }
     
     public static void main(String[] args) {
-        // Node<Integer> head = takeLinkedListInput();
+        // Node61<Integer> head = takeLinkedListInput();
         // head = mergeSort(head);
         // printNodes(head);
         collection();

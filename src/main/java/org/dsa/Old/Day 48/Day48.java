@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Day48 {
 
     /* Question 1 -> Modular Multiplicative Inverse

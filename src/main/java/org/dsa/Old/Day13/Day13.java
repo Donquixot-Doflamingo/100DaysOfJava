@@ -1,3 +1,7 @@
+package org.dsa.Old.Day13;
+
+import java.util.Arrays;
+
 public class Day13 {
     //question 7 rotate the array by one position in clock-wise direction
     public static int[] rotateArray(int a[]){
@@ -106,5 +110,13 @@ public class Day13 {
              }
          }
      }
+
+    // Helper method to print array
+    public static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
 
 }

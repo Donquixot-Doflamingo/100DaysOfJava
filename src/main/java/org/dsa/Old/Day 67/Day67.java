@@ -1,8 +1,8 @@
-package Day_67;
+package org.dsa.Old.Day_67;
 
-import CircularQueue.*;
-import DynamicQueue.DynamicQueue;
-import QueueLL.QueueLL;
+import org.dsa.Old.CircularQueue.*;
+import org.dsa.Old.DynamicQueue.DynamicQueue;
+import org.dsa.Old.QueueLL.QueueLL;
 
 public class Day67 {
 

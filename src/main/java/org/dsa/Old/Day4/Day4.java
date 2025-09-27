@@ -1,3 +1,4 @@
+package org.dsa.Old.Day4;
 import java.util.Scanner;
 
 public class Day4 {

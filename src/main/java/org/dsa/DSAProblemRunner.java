@@ -1,6 +1,9 @@
-import problems.ProblemTest;
-import problems.TestCase;
-import problems.impl.PalindromeProblem;
+package org.dsa;
+
+
+import org.dsa.revamp.problems.ProblemTest;
+import org.dsa.revamp.problems.TestCase;
+import org.dsa.revamp.problems.impl.PalindromeProblem;
 
 import java.util.Arrays;
 import java.util.List;
@@ -104,7 +107,7 @@ public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
 
     /**
      * Main method for running individual problem tests
-     * Usage: java DSAProblemRunner <ProblemClassName>
+     * Usage: java org.dsa.DSAProblemRunner <ProblemClassName>
      */
     public static void main(String[] args) {
         DSAProblemRunner problemRunner = new DSAProblemRunner(new PalindromeProblem());

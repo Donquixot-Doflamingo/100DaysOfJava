@@ -2,7 +2,7 @@ package Day70;
 
 import java.util.Scanner;
 
-import BinarySearchTree.BinarySearchTree;
+import org.dsa.Old.BinarySearchTree.BinarySearchTree;
 
 public class Day70 {
     /* ******************************** Started learning about Binary Search Tree Part 1 ******************************** */

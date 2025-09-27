@@ -1,4 +1,4 @@
-package problems;
+package org.dsa.revamp.problems;
 
 import java.util.List;
 

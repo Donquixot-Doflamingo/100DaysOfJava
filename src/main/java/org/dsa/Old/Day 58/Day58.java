@@ -1,10 +1,10 @@
 import java.util.*;
 
-class Node<T> {
+class Node58<T> {
     T data;
-    Node<T> next;
+    Node58<T> next;
 
-    Node(T data){
+    Node58(T data){
         this.data = data;
         // this isn't required cause the defult value of any reference is null
         // next = null;
@@ -14,7 +14,7 @@ class Node<T> {
 public class Day58 {
 
     // To print all the nodes in the linked list
-    public static void printNodes(Node<Integer> head){
+    public static void printNodes(Node58<Integer> head){
         while(head != null){
             System.out.print(head.data + " ");
             head = head.next;
@@ -22,12 +22,12 @@ public class Day58 {
     }
     
     // to take input from the user of the LL - O(n)
-    public static Node<Integer> takeLinkedListInput(){
+    public static Node58<Integer> takeLinkedListInput(){
         Scanner s = new Scanner(System.in);
         int data = s.nextInt();
-        Node<Integer> head = null, tail = null;
+        Node58<Integer> head = null, tail = null;
         while(data != -1){
-            Node<Integer> currentNode = new Node<Integer>(data);
+            Node58<Integer> currentNode = new Node58<Integer>(data);
             // check if it is the first node and make it head
             if(head == null){
                 head = currentNode;
@@ -88,18 +88,18 @@ public class Day58 {
         10 98 7 66 8 99  
     */
     
-    public static Node<Integer> InsertNodes(Node<Integer> head){
+    public static Node58<Integer> InsertNodes(Node58<Integer> head){
         Scanner s = new Scanner(System.in);
         int data = s.nextInt(), pos = s.nextInt();
         s.close();
-        Node<Integer> newNode = new Node<Integer>(data);
+        Node58<Integer> newNode = new Node58<Integer>(data);
         if(pos == 0){
             newNode.next = head;
             head = newNode;
             return head;
         }
 
-        Node<Integer> temp = head;
+        Node58<Integer> temp = head;
         int currPos = 0;
 
         while( temp != null && currPos < (pos-1)){
@@ -165,7 +165,7 @@ public class Day58 {
         10 20 30 40 50 60 
     */
     
-    public static Node<Integer> DeleteNode(Node<Integer> head, int pos){
+    public static Node58<Integer> DeleteNode(Node58<Integer> head, int pos){
         Scanner s = new Scanner(System.in);
         // int pos = s.nextInt();
         s.close();
@@ -176,7 +176,7 @@ public class Day58 {
             return head.next;
         }
 
-        Node<Integer> temp = head;
+        Node58<Integer> temp = head;
         int currPos = 0;
 
         while(temp != null && currPos < (pos-1)){
@@ -238,7 +238,7 @@ public class Day58 {
         progressing in a left to right manner with a jump of 1, then the N = 6 appears at position 4. 
     */
     
-    public static int SearchNode(Node<Integer> head, int x){
+    public static int SearchNode(Node58<Integer> head, int x){
         if(head == null){
             return -1;
         }
@@ -252,7 +252,7 @@ public class Day58 {
         return -1;
     }
     public static void main(String[] args) {
-        Node<Integer> head = takeLinkedListInput();
+        Node58<Integer> head = takeLinkedListInput();
         printNodes(head);
         System.out.println();
         int v = SearchNode(head, 1);

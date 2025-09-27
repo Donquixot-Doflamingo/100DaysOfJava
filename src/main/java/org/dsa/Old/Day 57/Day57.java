@@ -1,10 +1,10 @@
 import java.util.*;
 
-class Node<T> {
+class Node57<T> {
     T data;
-    Node<T> next;
+    Node57<T> next;
 
-    Node(T data){
+    Node57(T data){
         this.data = data;
         // this isn't required cause the defult value of any reference is null
         // next = null;
@@ -14,15 +14,15 @@ class Node<T> {
 public class Day57 {
     
     // To create the linked list Nodes -> 3 4 5 2 6 1 9 -1
-    public static Node<Integer> createLinkedList(){
-        Node<Integer> n1 = new Node<Integer>(11);
-        Node<Integer> n2 = new Node<Integer>(4);
-        Node<Integer> n3 = new Node<Integer>(5);
-        Node<Integer> n4 = new Node<Integer>(2);
-        Node<Integer> n5 = new Node<Integer>(6);
-        Node<Integer> n6 = new Node<Integer>(1);
-        Node<Integer> n7 = new Node<Integer>(9);
-        Node<Integer> n8 = new Node<Integer>(-1);
+    public static Node57<Integer> createLinkedList(){
+        Node57<Integer> n1 = new Node57<Integer>(11);
+        Node57<Integer> n2 = new Node57<Integer>(4);
+        Node57<Integer> n3 = new Node57<Integer>(5);
+        Node57<Integer> n4 = new Node57<Integer>(2);
+        Node57<Integer> n5 = new Node57<Integer>(6);
+        Node57<Integer> n6 = new Node57<Integer>(1);
+        Node57<Integer> n7 = new Node57<Integer>(9);
+        Node57<Integer> n8 = new Node57<Integer>(-1);
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
@@ -35,7 +35,7 @@ public class Day57 {
     }
 
     // To print all the nodes in the linked list
-    public static void printNodes(Node<Integer> head){
+    public static void printNodes(Node57<Integer> head){
         while(head != null){
             System.out.print(head.data + " ");
             head = head.next;
@@ -43,13 +43,13 @@ public class Day57 {
     }
 
     // incrementing the first node
-    public static void incrementFirstNode(Node<Integer> head){
+    public static void incrementFirstNode(Node57<Integer> head){
         head.data++;
     }
 
     // incrementing all the nodes
-    public static void increment(Node<Integer> head){
-        Node<Integer> temp = head;
+    public static void increment(Node57<Integer> head){
+        Node57<Integer> temp = head;
         while(temp != null){
             System.out.println(temp.data);
             temp.data++;
@@ -87,9 +87,9 @@ public class Day57 {
         0 
     */
 
-    public static int Lengthif1(Node<Integer> head){
+    public static int Lengthif1(Node57<Integer> head){
         int count = 0;
-        Node<Integer> temp = head;
+        Node57<Integer> temp = head;
         while(temp != null && temp.data != -1){
             count++;
             temp = temp.next;
@@ -140,8 +140,8 @@ public class Day57 {
         0 
     */
 
-    public static void elementAtI(Node<Integer> head, int i){
-        Node<Integer> temp = head;
+    public static void elementAtI(Node57<Integer> head, int i){
+        Node57<Integer> temp = head;
         // while(temp != null && temp.data != -1){
         //     count++;
         //     if(count == i){
@@ -159,19 +159,19 @@ public class Day57 {
     }
 
     // to take input from the user of the LL - O(n^2)
-    public static Node<Integer> takeInput(){
+    public static Node57<Integer> takeInput(){
         Scanner s = new Scanner(System.in);
         int data = s.nextInt();
-        Node<Integer> head = null;
+        Node57<Integer> head = null;
         while(data != -1){
-            Node<Integer> currentNode = new Node<Integer>(data);
+            Node57<Integer> currentNode = new Node57<Integer>(data);
             // check if it is the first node and make it head
             if(head == null){
                 head = currentNode;
             }
             else{
                 // make a tail node and make a connection with head
-                Node<Integer> tail = head;
+                Node57<Integer> tail = head;
                 // if there are more than 2 nodes in list
                 while(tail.next != null){
                     tail = tail.next;
@@ -187,12 +187,12 @@ public class Day57 {
     }
 
     // to take input from the user of the LL - O(n)
-    public static Node<Integer> takeLinkedListInput(){
+    public static Node57<Integer> takeLinkedListInput(){
         Scanner s = new Scanner(System.in);
         int data = s.nextInt();
-        Node<Integer> head = null, tail = null;
+        Node57<Integer> head = null, tail = null;
         while(data != -1){
-            Node<Integer> currentNode = new Node<Integer>(data);
+            Node57<Integer> currentNode = new Node57<Integer>(data);
             // check if it is the first node and make it head
             if(head == null){
                 head = currentNode;
@@ -208,7 +208,7 @@ public class Day57 {
         return head;
     }
     public static void main(String[] args) {
-        Node<Integer> head = takeInput();
+        Node57<Integer> head = takeInput();
         printNodes(head);
     }
 }

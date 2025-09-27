@@ -1,10 +1,10 @@
 import java.util.*;
 
-class Node<T> {
+class Node62<T> {
     T data;
-    Node<T> next;
+    Node62<T> next;
 
-    Node(T data){
+    Node62(T data){
         this.data = data;
         // this isn't required cause the defult value of any reference is null
         // next = null;
@@ -15,7 +15,7 @@ public class Day62 {
     
     // PreRequisites
         // To print all the nodes in the linked list
-        public static void printNodes(Node<Integer> head){
+        public static void printNodes(Node62<Integer> head){
             while(head != null){
                 System.out.print(head.data + " ");
                 head = head.next;
@@ -23,12 +23,12 @@ public class Day62 {
         }
         
         // to take input from the user of the LL - O(n)
-        public static Node<Integer> takeLinkedListInput(){
+        public static Node62<Integer> takeLinkedListInput(){
             Scanner s = new Scanner(System.in);
             int data = s.nextInt();
-            Node<Integer> head = null, tail = null;
+            Node62<Integer> head = null, tail = null;
             while(data != -1){
-                Node<Integer> currentNode = new Node<Integer>(data);
+                Node62<Integer> currentNode = new Node62<Integer>(data);
                 // check if it is the first node and make it head
                 if(head == null){
                     head = currentNode;
@@ -44,15 +44,15 @@ public class Day62 {
             return head;
         }
     
-        public static Node<Integer> createLinkedList(){
-            Node<Integer> n1 = new Node<Integer>(2);
-            Node<Integer> n2 = new Node<Integer>(4);
-            Node<Integer> n3 = new Node<Integer>(6);
-            Node<Integer> n4 = new Node<Integer>(8);
-            Node<Integer> n5 = new Node<Integer>(101);
-            Node<Integer> n6 = new Node<Integer>(121);
-            Node<Integer> n7 = new Node<Integer>(141);
-            Node<Integer> n8 = new Node<Integer>(161);
+        public static Node62<Integer> createLinkedList(){
+            Node62<Integer> n1 = new Node62<Integer>(2);
+            Node62<Integer> n2 = new Node62<Integer>(4);
+            Node62<Integer> n3 = new Node62<Integer>(6);
+            Node62<Integer> n4 = new Node62<Integer>(8);
+            Node62<Integer> n5 = new Node62<Integer>(101);
+            Node62<Integer> n6 = new Node62<Integer>(121);
+            Node62<Integer> n7 = new Node62<Integer>(141);
+            Node62<Integer> n8 = new Node62<Integer>(161);
             n1.next = n2;
             n2.next = n3;
             n3.next = n4;
@@ -107,7 +107,7 @@ public class Day62 {
         5
     */
 
-    public static int returnIndexOfElement(Node<Integer> head, int num){
+    public static int returnIndexOfElement(Node62<Integer> head, int num){
         if(head == null) return -1;
         if(head.data.equals(num)) return 0;
         int small = returnIndexOfElement(head.next, num);
@@ -150,13 +150,13 @@ public class Day62 {
         10 20 30 40 
     */
 
-    public static Node<Integer> evenAfterOdd(Node<Integer> head){
+    public static Node62<Integer> evenAfterOdd(Node62<Integer> head){
         
         if (head == null) {
             return head;
         }
 
-        Node<Integer> oddH = null, oddT = null, evenH = null, evenT = null;
+        Node62<Integer> oddH = null, oddT = null, evenH = null, evenT = null;
 
         while(head != null){
 
@@ -239,13 +239,13 @@ public class Day62 {
         For the second query, we delete three nodes after every two nodes, resulting in the final list, 1 -> 2 -> 6 -> 7. 
     */
 
-    public static Node<Integer> deleteNNode(Node<Integer> head, int times, int index){
+    public static Node62<Integer> deleteNNode(Node62<Integer> head, int times, int index){
         if(index == 0 || head == null) return null;
 
         if(times == 0) return head;
 
-        Node<Integer> currNode = head;
-        Node<Integer> temp = null;
+        Node62<Integer> currNode = head;
+        Node62<Integer> temp = null;
 
         while(currNode != null){
             int take = 0, skip = 0;
@@ -317,11 +317,11 @@ public class Day62 {
         90 80 90 25 65 85 70  
     */
 
-    public static Node<Integer> swapNodes (Node<Integer> head, int i, int j) {
+    public static Node62<Integer> swapNodes (Node62<Integer> head, int i, int j) {
         if(i == j) return head;
 
-        Node<Integer> currentNode = head, prev = null;
-        Node<Integer> firstNode = null, secondNode = null, firstNodePrev = null, secondNodePrev = null;
+        Node62<Integer> currentNode = head, prev = null;
+        Node62<Integer> firstNode = null, secondNode = null, firstNodePrev = null, secondNodePrev = null;
 
         int pos = 0;
 
@@ -344,7 +344,7 @@ public class Day62 {
         if(secondNodePrev != null) secondNodePrev.next = firstNode;
         else head = firstNode;
 
-        Node<Integer> currentfirstNode = secondNode.next;
+        Node62<Integer> currentfirstNode = secondNode.next;
         secondNode.next = firstNode.next;
         firstNode.next = currentfirstNode;
 
@@ -399,12 +399,12 @@ public class Day62 {
         40 30 20 10  
     */
 
-    public static Node<Integer> kReverse(Node<Integer> head, int k){
+    public static Node62<Integer> kReverse(Node62<Integer> head, int k){
         if(k == 0 || k==1) return head;
 
-        Node<Integer> current = head;
-        Node<Integer> fwd = null;
-        Node<Integer> prev = null;
+        Node62<Integer> current = head;
+        Node62<Integer> fwd = null;
+        Node62<Integer> prev = null;
 
         int count = 0;
 
@@ -455,7 +455,7 @@ public class Day62 {
         -5 1 5 9 10 67 89 90 
     */
     
-    public static int length(Node<Integer> head){
+    public static int length(Node62<Integer> head){
         int count = 0;
         while(head != null){
             head = head.next;
@@ -464,12 +464,12 @@ public class Day62 {
         return count;
     }
 
-    public static Node<Integer> bubbleSort(Node<Integer> head){
+    public static Node62<Integer> bubbleSort(Node62<Integer> head){
         int n = length(head);
 
         for(int i = 0; i < (n - 1); i++){
-            Node<Integer> prev = null;
-            Node<Integer> curr = head;
+            Node62<Integer> prev = null;
+            Node62<Integer> curr = head;
 
             for(int j = 0; j < (n - i - 1); j++){
                 if(curr.data <= curr.next.data){
@@ -478,14 +478,14 @@ public class Day62 {
                 }
                 else{
                     if(prev == null){
-                        Node<Integer> fwd = curr.next;
+                        Node62<Integer> fwd = curr.next;
                         head = head.next;
                         curr.next = fwd.next;
                         fwd.next = curr;
                         prev = fwd;
                     }
                     else{
-                        Node<Integer> fwd = curr.next;
+                        Node62<Integer> fwd = curr.next;
                         prev.next = fwd;
                         curr.next = fwd.next;
                         fwd.next = curr;
@@ -498,7 +498,7 @@ public class Day62 {
     }
     
     public static void main(String[] args) {
-        Node<Integer> head = takeLinkedListInput();
+        Node62<Integer> head = takeLinkedListInput();
         printNodes(bubbleSort(head));
     }
 }

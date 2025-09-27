@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-class Node<T> {
+class Node60<T> {
     T data;
-    Node<T> next;
+    Node60<T> next;
 
-    Node(T data){
+    Node60(T data){
         this.data = data;
         // this isn't required cause the defult value of any reference is null
         // next = null;
@@ -12,10 +12,10 @@ class Node<T> {
 }
 
 class doubleNode{
-    Node<Integer> head;
-    Node<Integer> tail;
+    Node60<Integer> head;
+    Node60<Integer> tail;
 
-    doubleNode(Node<Integer> head, Node<Integer> tail){
+    doubleNode(Node60<Integer> head, Node60<Integer> tail){
         this.head = head;
         this.tail = tail;
     }
@@ -28,7 +28,7 @@ class doubleNode{
 public class Day60 {
     // PreRequisites
         // To print all the nodes in the linked list
-        public static void printNodes(Node<Integer> head){
+        public static void printNodes(Node60<Integer> head){
             while(head != null){
                 System.out.print(head.data + " ");
                 head = head.next;
@@ -36,12 +36,12 @@ public class Day60 {
         }
         
         // to take input from the user of the LL - O(n)
-        public static Node<Integer> takeLinkedListInput(){
+        public static Node60<Integer> takeLinkedListInput(){
             Scanner s = new Scanner(System.in);
             int data = s.nextInt();
-            Node<Integer> head = null, tail = null;
+            Node60<Integer> head = null, tail = null;
             while(data != -1){
-                Node<Integer> currentNode = new Node<Integer>(data);
+                Node60<Integer> currentNode = new Node60<Integer>(data);
                 // check if it is the first node and make it head
                 if(head == null){
                     head = currentNode;
@@ -60,7 +60,7 @@ public class Day60 {
     /***************************************** Assignments of Linked List Part 1 ***************************************/
 
     /* Question 1 -> Print Linked List using Recursive  approach */
-    public static void print(Node<Integer> head){
+    public static void print(Node60<Integer> head){
         if(head == null) return;
         System.out.print(head.data + " ");
         print(head.next);
@@ -68,11 +68,11 @@ public class Day60 {
 
     /* Question 2 -> Insert node at a given position in Linked List using Recursive  approach */
 
-    public static Node<Integer> insert(Node<Integer> head, int pos, int data){
+    public static Node60<Integer> insert(Node60<Integer> head, int pos, int data){
         if(head == null || pos > 0) return head;
 
         if(pos == 0){
-            Node<Integer> newNode = new Node<Integer>(data);
+            Node60<Integer> newNode = new Node60<Integer>(data);
             newNode.next = head;
             return newNode;
         }
@@ -126,7 +126,7 @@ public class Day60 {
             10 20 30 50  
         */
     
-    public static Node<Integer> delete(Node<Integer> head, int pos){
+    public static Node60<Integer> delete(Node60<Integer> head, int pos){
         if(head == null) return head;
 
         if(pos == 0) return head.next;
@@ -173,10 +173,10 @@ public class Day60 {
     */
     
     // O(n^2) time complexity
-    public static Node<Integer> reverseCodingNinja(Node<Integer> head){
+    public static Node60<Integer> reverseCodingNinja(Node60<Integer> head){
         if(head == null || head.next == null) return head;
-        Node<Integer> temp = reverseCodingNinja(head.next);
-        Node<Integer> tail = temp;
+        Node60<Integer> temp = reverseCodingNinja(head.next);
+        Node60<Integer> tail = temp;
         while(tail.next != null){
             tail = tail.next;
         }
@@ -186,7 +186,7 @@ public class Day60 {
     }
 
     // using another class to solve this problem
-    public static doubleNode reverseUsingClass(Node<Integer> head){
+    public static doubleNode reverseUsingClass(Node60<Integer> head){
         doubleNode ans;
         if(head == null || head.next == null) { 
             ans = new doubleNode(head, head);
@@ -199,19 +199,19 @@ public class Day60 {
         return ans;
     }
 
-    public static Node<Integer> reverseWithClass(Node<Integer> head){
+    public static Node60<Integer> reverseWithClass(Node60<Integer> head){
         doubleNode ans = reverseUsingClass(head);
         return ans.head;
     }
 
-    public static Node<Integer> reverse(Node<Integer> head){
+    public static Node60<Integer> reverse(Node60<Integer> head){
         if(head == null || head.next == null) return head;
-        Node<Integer> temp = reverse(head.next);
+        Node60<Integer> temp = reverse(head.next);
         //one way
         // head.next.next = head;
 
         //second way
-        Node<Integer> reversedTail = head.next;
+        Node60<Integer> reversedTail = head.next;
         reversedTail.next = head;
         head.next = null;
         return temp;
@@ -219,7 +219,7 @@ public class Day60 {
     
 
     public static void main(String[] args) {
-        Node<Integer> head = takeLinkedListInput();
+        Node60<Integer> head = takeLinkedListInput();
         printNodes(head);
         System.out.println();
         printNodes(reverse(head));

@@ -1,10 +1,10 @@
 import java.util.*;
 
-class Node<T> {
+class Node59<T> {
     T data;
-    Node<T> next;
+    Node59<T> next;
 
-    Node(T data){
+    Node59(T data){
         this.data = data;
         // this isn't required cause the defult value of any reference is null
         // next = null;
@@ -14,7 +14,7 @@ class Node<T> {
 public class Day59 {
     // PreRequisites
         // To print all the nodes in the linked list
-        public static void printNodes(Node<Integer> head){
+        public static void printNodes(Node59<Integer> head){
             while(head != null){
                 System.out.print(head.data + " ");
                 head = head.next;
@@ -22,12 +22,12 @@ public class Day59 {
         }
         
         // to take input from the user of the LL - O(n)
-        public static Node<Integer> takeLinkedListInput(){
+        public static Node59<Integer> takeLinkedListInput(){
             Scanner s = new Scanner(System.in);
             int data = s.nextInt();
-            Node<Integer> head = null, tail = null;
+            Node59<Integer> head = null, tail = null;
             while(data != -1){
-                Node<Integer> currentNode = new Node<Integer>(data);
+                Node59<Integer> currentNode = new Node59<Integer>(data);
                 // check if it is the first node and make it head
                 if(head == null){
                     head = currentNode;
@@ -92,12 +92,12 @@ public class Day59 {
         Hence, the new list formed with an updated head pointing to 90.
     */
 
-    public static Node<Integer> AppendLastNToFirst(Node<Integer> head, int n){
+    public static Node59<Integer> AppendLastNToFirst(Node59<Integer> head, int n){
         if(head == null || n == 0) return head;
 
-        Node<Integer> initialHead = head;
-        Node<Integer> fast = head;
-        Node<Integer> slow = head;
+        Node59<Integer> initialHead = head;
+        Node59<Integer> fast = head;
+        Node59<Integer> slow = head;
 
         for(int i = 0; i < n; i++) fast = fast.next;
 
@@ -105,7 +105,7 @@ public class Day59 {
             fast = fast.next;
             slow = slow.next;
         }
-        Node<Integer> temp = slow.next;
+        Node59<Integer> temp = slow.next;
         slow.next = null;
         fast.next = initialHead;
         head = temp;
@@ -150,10 +150,10 @@ public class Day59 {
         10
     */
     
-    public static void eliminateDuplicates(Node<Integer> head){
+    public static void eliminateDuplicates(Node59<Integer> head){
         if(head == null) return ;
 
-        Node<Integer> current = head;
+        Node59<Integer> current = head;
 
         while(current.next != null){
             if(current.data == current.next.data) current.next = current.next.next;
@@ -202,7 +202,7 @@ public class Day59 {
         50 40 30 20 10 
     */
     
-    public static void printReverse(Node<Integer> head){
+    public static void printReverse(Node59<Integer> head){
         if(head == null) return;
         printReverse(head.next);
         System.out.print(head.data + " ");
@@ -249,24 +249,24 @@ public class Day59 {
         For the second query, the list is empty. An empty list is always a palindrome , hence the output is 'true'. 
     */
     
-    public static boolean palindromeList(Node<Integer> head){
+    public static boolean palindromeList(Node59<Integer> head){
         if (head == null || head.next == null) return true;
 
-        Node<Integer> fast = head;
-        Node<Integer> slow = head;
+        Node59<Integer> fast = head;
+        Node59<Integer> slow = head;
 
         while (fast.next != null && fast.next.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
-        Node<Integer> secondHead = slow.next;
+        Node59<Integer> secondHead = slow.next;
 
         slow.next = null;
         secondHead = reverseLinkedList(secondHead) ;
         
         // compare two sublists now
-        Node<Integer> firstSubList = secondHead;
-        Node<Integer> secondSubList = head;
+        Node59<Integer> firstSubList = secondHead;
+        Node59<Integer> secondSubList = head;
 
         while (firstSubList != null) {
             if (firstSubList.data != secondSubList.data) return false;
@@ -284,10 +284,10 @@ public class Day59 {
         return true;
     }
 
-    private static Node<Integer> reverseLinkedList (Node<Integer> head){
-        Node<Integer> curr = head;
-        Node<Integer> prev = null;
-        Node<Integer> fwd = null;
+    private static Node59<Integer> reverseLinkedList (Node59<Integer> head){
+        Node59<Integer> curr = head;
+        Node59<Integer> prev = null;
+        Node59<Integer> fwd = null;
 
         while (curr != null) {
             fwd = curr.next;
@@ -298,7 +298,7 @@ public class Day59 {
         return prev;
     }
     public static void main(String[] args) {
-        Node<Integer> head = takeLinkedListInput();
+        Node59<Integer> head = takeLinkedListInput();
         printNodes(head);
         System.out.println(palindromeList(head));
     }

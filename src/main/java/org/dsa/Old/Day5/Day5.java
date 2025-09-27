@@ -1,4 +1,4 @@
-package Day5;
+package org.dsa.Old.Day5;
 
 import java.util.Scanner;
 

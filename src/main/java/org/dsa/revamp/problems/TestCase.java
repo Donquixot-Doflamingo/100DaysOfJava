@@ -1,4 +1,4 @@
-package problems;
+package org.dsa.revamp.problems;
 
 /**
  * Represents a test case with input and expected output

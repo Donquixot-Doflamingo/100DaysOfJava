@@ -1,5 +1,5 @@
-package DynamicQueue;
-import CircularQueue.QueueEmptyException;
+package org.dsa.Old.DynamicQueue;
+import org.dsa.Old.CircularQueue.QueueEmptyException;
 
 public class DynamicQueue {
 

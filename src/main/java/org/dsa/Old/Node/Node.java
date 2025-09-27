@@ -1,4 +1,4 @@
-package Node;
+package org.dsa.Old.Node;
 
 public class Node<T> {
     public T data;

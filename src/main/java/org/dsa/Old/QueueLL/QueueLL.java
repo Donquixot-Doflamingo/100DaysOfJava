@@ -1,7 +1,7 @@
-package QueueLL;
+package org.dsa.Old.QueueLL;
 
-import CircularQueue.QueueEmptyException;
-import Node.Node;
+import org.dsa.Old.CircularQueue.QueueEmptyException;
+import org.dsa.Old.Node.Node;
 
 public class QueueLL<T> {
     private Node<T> front;

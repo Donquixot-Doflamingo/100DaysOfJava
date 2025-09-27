@@ -1,8 +1,10 @@
-class Node<T> {
-    T data;
-    Node<T> next;
+package org.dsa.Old.Day_56;
 
-    Node(T data){
+class Node56<T> {
+    T data;
+    Node56<T> next;
+
+    Node56(T data){
         this.data = data;
         // this isn't required cause the defult value of any reference is null
         // next = null;
@@ -165,11 +167,11 @@ public class Day56 {
 */
 
         // To create the linked list Nodes
-        public static Node<Integer> createLinkedList(){
-            Node<Integer> n1 = new Node<Integer>(3);
-            Node<Integer> n2 = new Node<Integer>(33);
-            Node<Integer> n3 = new Node<Integer>(333);
-            Node<Integer> n4 = new Node<Integer>(3333);
+        public static Node56<Integer> createLinkedList(){
+            Node56<Integer> n1 = new Node56<Integer>(3);
+            Node56<Integer> n2 = new Node56<Integer>(33);
+            Node56<Integer> n3 = new Node56<Integer>(333);
+            Node56<Integer> n4 = new Node56<Integer>(3333);
             n1.next = n2;
             n2.next = n3;
             n3.next = n4;
@@ -178,7 +180,7 @@ public class Day56 {
         }
 
         // To print all the nodes in the linked list
-        public static void printNodes(Node<Integer> head){
+        public static void printNodes(Node56<Integer> head){
             while(head != null){
                 System.out.println(head.data);
                 head = head.next;
@@ -187,7 +189,7 @@ public class Day56 {
     
 
         public static void main(String[] args) {
-        Node<Integer> head = createLinkedList();
+        Node56<Integer> head = createLinkedList();
         printNodes(head);
     }
     

@@ -1,3 +1,4 @@
+package org.dsa.Old.Day8;
 import java.util.Scanner;
 
 class funtionsAndScope {

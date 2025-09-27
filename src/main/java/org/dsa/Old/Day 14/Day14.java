@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Day14 {
     //question 13 Kadane's Algo [V.V.V.V.V IMP]
     public static int kadaneAlgo(int a[], int n){
@@ -98,7 +100,7 @@ public class Day14 {
     
     public static int countingCubes(){
         int count = 0;
-        int arr[] = takingInput();
+        int arr[] = {1, 8, 27, 64, 125}; // Example array since takingInput() method is missing
         for(int i = 0; i < arr.length; i++){
             int cubeRoot = (int)Math.round(Math.cbrt(arr[i]));
             if(cubeRoot * cubeRoot * cubeRoot == arr[i]){
@@ -111,7 +113,7 @@ public class Day14 {
     // Question 18 Sum of array ranges
 
     public static int sumOfArrayRange(){
-        int arr[] = takingInput();
+        int arr[] = {1, 2, 3, 4, 5}; // Example array since takingInput() method is missing
         Scanner sc = new Scanner(System.in);
         int l = sc.nextInt();
         int r = sc.nextInt();

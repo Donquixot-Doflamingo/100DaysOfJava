@@ -1,7 +1,7 @@
-package problems.impl;
+package org.dsa.revamp.problems.impl;
 
-import problems.ProblemTest;
-import problems.TestCase;
+import org.dsa.revamp.problems.ProblemTest;
+import org.dsa.revamp.problems.TestCase;
 
 import java.util.*;
 
