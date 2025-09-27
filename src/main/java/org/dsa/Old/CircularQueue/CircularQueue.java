@@ -1,4 +1,4 @@
-package CircularQueue;
+package org.dsa.Old.CircularQueue;
 
 public class CircularQueue {
 

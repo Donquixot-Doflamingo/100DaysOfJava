@@ -1,4 +1,4 @@
-package BinarySearchTree;
+package org.dsa.Old.BinarySearchTree;
 
 public class BinarySearchTree<T> {
     public T data;

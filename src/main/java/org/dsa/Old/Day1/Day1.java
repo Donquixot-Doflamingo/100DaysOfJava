@@ -1,3 +1,5 @@
+package org.dsa.Old.Day1;
+
 public class Day1{
 
     static int roofTopsOfBuildings(int arr[], int n){
