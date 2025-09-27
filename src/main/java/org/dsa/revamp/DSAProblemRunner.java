@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
 import org.dsa.revamp.problems.impl.palindrome.PalindromeProblem;
+import org.dsa.revamp.problems.impl.twosum.TwoSumProblem;
 
 import java.util.Arrays;
 import java.util.List;
@@ -110,9 +111,8 @@ public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
      * Usage: java org.dsa.revamp.DSAProblemRunner <ProblemClassName>
      */
     public static void main(String[] args) {
-        DSAProblemRunner problemRunner = new DSAProblemRunner(new PalindromeProblem());
         try {
-            runTests(problemRunner.problemTest);
+            runTests(new DSAProblemRunner(new TwoSumProblem()).problemTest);
 
         } catch (Exception e) {
             log.error("❌ Error running tests: {}", e.getMessage(), e);
