@@ -2,7 +2,6 @@ package org.dsa.revamp;
 
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.dsa.revamp.problems.ProblemTest;
@@ -31,14 +30,14 @@ public class DSAProblemRunner {
      * @param <O>     Output type
      */
     public static <I, O> void runTests(ProblemTest<I, O> problem) {
-        System.out.println("=".repeat(60));
-        System.out.println("Running tests for: " + problem.getProblemName());
-        System.out.println("=".repeat(60));
+        log.info("=".repeat(60));
+        log.info("Running tests for: {}", problem.getProblemName());
+        log.info("=".repeat(60));
 
         List<TestCase<I, O>> testCases = problem.loadTestCases();
 
         if (testCases == null || testCases.isEmpty()) {
-            System.out.println("❌ No test cases found!");
+            log.error("❌ No test cases found!");
             return;
         }
 
@@ -47,14 +46,14 @@ public class DSAProblemRunner {
 
         for (int i = 0; i < testCases.size(); i++) {
             TestCase<I, O> testCase = testCases.get(i);
-            System.out.println("\n📋 Test Case " + (i + 1) + ":");
+            log.info("\n\uD83D\uDCCB Test Case {}:", i + 1);
 
             if (!testCase.description().isEmpty()) {
-                System.out.println("   Description: " + testCase.description());
+                log.info("   Description: {}", testCase.description());
             }
 
-            System.out.println("   Input: " + testCase.input());
-            System.out.println("   Expected: " + testCase.expectedOutput());
+            log.info("   Input: {}", testCase.input());
+            log.info("   Expected: {}", testCase.expectedOutput());
 
             try {
                 long startTime = System.nanoTime();
@@ -62,34 +61,32 @@ public class DSAProblemRunner {
                 long endTime = System.nanoTime();
                 double executionTime = (endTime - startTime) / 1_000_000.0; // Convert to milliseconds
 
-                System.out.println("   Actual: " + actualOutput);
-                System.out.printf("   Execution Time: %.3f ms%n", executionTime);
+                log.info("   Actual: {}", actualOutput);
+                log.info("   Execution Time: {} ms", executionTime);
 
                 boolean passed = isEqual(testCase.expectedOutput(), actualOutput);
 
                 if (passed) {
-                    System.out.println("   ✅ PASSED");
+                    log.info("   ✅ PASSED");
                     passedTests++;
                 } else {
-                    System.out.println("   ❌ FAILED");
+                    log.error("   ❌ FAILED");
                 }
 
             } catch (Exception e) {
-                System.out.println("   ❌ FAILED with exception: " + e.getMessage());
-                e.printStackTrace();
+                log.error("   ❌ FAILED with exception: {}", e.getMessage());
             }
         }
 
-        System.out.println("\n" + "=".repeat(60));
-        System.out.printf("Test Results: %d/%d passed (%.1f%%)%n",
-                passedTests, totalTests, (passedTests * 100.0 / totalTests));
+        log.info("\n{}", "=".repeat(60));
+        log.info("Test Results: {}/{} passed {}%", passedTests, totalTests, (passedTests * 100.0 / totalTests));
 
         if (passedTests == totalTests) {
-            System.out.println("🎉 All tests passed!");
+            log.info("🎉 All tests passed!");
         } else {
-            System.out.printf("⚠️  %d test(s) failed%n", (totalTests - passedTests));
+            log.error("⚠️  {} test(s) failed", (totalTests - passedTests));
         }
-        System.out.println("=".repeat(60));
+        log.info("=".repeat(60));
     }
 
     /**
@@ -124,7 +121,7 @@ public class DSAProblemRunner {
             runTests(problemRunner.problemTest);
 
         } catch (Exception e) {
-            System.out.println("❌ Error running tests: " + e.getMessage());
+            log.error("❌ Error running tests: {}", e.getMessage());
             e.printStackTrace();
         }
     }
