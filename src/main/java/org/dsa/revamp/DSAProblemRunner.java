@@ -1,4 +1,4 @@
-package org.dsa;
+package org.dsa.revamp;
 
 
 import org.dsa.revamp.problems.ProblemTest;
@@ -107,7 +107,7 @@ public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
 
     /**
      * Main method for running individual problem tests
-     * Usage: java org.dsa.DSAProblemRunner <ProblemClassName>
+     * Usage: java org.dsa.revamp.DSAProblemRunner <ProblemClassName>
      */
     public static void main(String[] args) {
         DSAProblemRunner problemRunner = new DSAProblemRunner(new PalindromeProblem());
