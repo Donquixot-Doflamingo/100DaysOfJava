@@ -1,8 +1,6 @@
 package org.dsa.revamp;
 
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
@@ -16,11 +14,7 @@ import java.util.Objects;
  * Main runner class for executing DSA problem tests
  */
 @Slf4j
-@Getter
-@RequiredArgsConstructor
-public class DSAProblemRunner {
-
-    private final ProblemTest<?, ?> problemTest;
+public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
 
     /**
      * Run tests for a given problem implementation
