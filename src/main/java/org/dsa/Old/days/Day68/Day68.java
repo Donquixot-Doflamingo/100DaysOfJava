@@ -1,8 +1,9 @@
 package org.dsa.Old.days.Day68;
+import org.dsa.Old.datastructures.QueueUsingStacks.QueueUsingStacks;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
-import QueueUsingStacks.QueueUsingStacks;;
 
 public class Day68 {
 
