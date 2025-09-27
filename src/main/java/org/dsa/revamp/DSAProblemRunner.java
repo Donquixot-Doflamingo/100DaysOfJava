@@ -115,8 +115,7 @@ public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
             runTests(problemRunner.problemTest);
 
         } catch (Exception e) {
-            log.error("❌ Error running tests: {}", e.getMessage());
-            e.printStackTrace();
+            log.error("❌ Error running tests: {}", e.getMessage(), e);
         }
     }
 }
