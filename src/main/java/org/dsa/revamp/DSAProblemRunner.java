@@ -3,7 +3,7 @@ package org.dsa.revamp;
 
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
-import org.dsa.revamp.problems.impl.PalindromeProblem;
+import org.dsa.revamp.problems.impl.palindrome.PalindromeProblem;
 
 import java.util.Arrays;
 import java.util.List;

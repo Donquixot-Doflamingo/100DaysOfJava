@@ -1,4 +1,4 @@
-package org.dsa.revamp.problems.impl;
+package org.dsa.revamp.problems.impl.twosum;
 
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
@@ -50,8 +50,8 @@ public class TwoSumProblem implements ProblemTest<TwoSumInput, int[]> {
     
     @Override
     public int[] solveProblem(TwoSumInput input) {
-        int[] nums = input.getNums();
-        int target = input.getTarget();
+        int[] nums = input.nums();
+        int target = input.target();
         
         // Using HashMap for O(n) solution
         Map<Integer, Integer> numToIndex = new HashMap<>();
@@ -76,28 +76,3 @@ public class TwoSumProblem implements ProblemTest<TwoSumInput, int[]> {
     }
 }
 
-/**
- * Input class for Two Sum problem
- */
-class TwoSumInput {
-    private final int[] nums;
-    private final int target;
-    
-    public TwoSumInput(int[] nums, int target) {
-        this.nums = nums;
-        this.target = target;
-    }
-    
-    public int[] getNums() {
-        return nums;
-    }
-    
-    public int getTarget() {
-        return target;
-    }
-    
-    @Override
-    public String toString() {
-        return String.format("nums=%s, target=%d", Arrays.toString(nums), target);
-    }
-}

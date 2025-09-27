@@ -1,4 +1,4 @@
-package org.dsa.revamp.problems.impl;
+package org.dsa.revamp.problems.impl.palindrome;
 
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
