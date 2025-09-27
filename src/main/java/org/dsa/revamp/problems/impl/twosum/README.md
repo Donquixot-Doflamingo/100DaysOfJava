@@ -1,7 +1,3 @@
-Here’s a reusable **Markdown template** for your 100 DSA challenge, starting with the **Two Sum** problem. You can copy this structure and use it for every upcoming problem.
-
----
-
 ## 🧩 Problem 2: Two Sum
 
 ### ✅ Problem Statement

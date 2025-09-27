@@ -1,7 +1,3 @@
-Here’s the **same reusable template** filled out for your **second problem: Valid Palindrome**. You can continue using this structure for all 100 problems.
-
----
-
 ## 🧩 Problem 1: Valid Palindrome
 
 ### ✅ Problem Statement
