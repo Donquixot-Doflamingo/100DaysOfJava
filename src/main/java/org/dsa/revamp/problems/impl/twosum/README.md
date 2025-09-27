@@ -65,11 +65,3 @@ Your objective (without detailing the solution logic here) is to **identify a pa
 ### ✅ Final Thoughts / Learnings
 
 > *(What you learned or observed solving this problem)*
-
----
-
-## ✅ Template for Next Problems
-
-You can reuse the same structure and just replace the problem name and details.
-
-If you want, I can generate a blank version of this template too — just ask!

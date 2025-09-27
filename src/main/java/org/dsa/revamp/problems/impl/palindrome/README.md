@@ -67,7 +67,3 @@ The output is typically a **boolean** indicating whether the cleaned string is a
 ### ✅ Final Thoughts / Learnings
 
 > *(Add insights or challenges you noticed while solving)*
-
----
-
-Let me know when you're ready for **Problem 3**, or if you want an empty template to start filling directly!
