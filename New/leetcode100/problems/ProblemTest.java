@@ -1,3 +1,5 @@
+package problems;
+
 import java.util.List;
 
 /**
@@ -9,7 +11,7 @@ public interface ProblemTest<I, O> {
     
     /**
      * Load test cases for the problem
-     * @return List of TestCase objects containing input and expected output
+     * @return List of problems.TestCase objects containing input and expected output
      */
     List<TestCase<I, O>> loadTestCases();
     

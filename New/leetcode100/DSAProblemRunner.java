@@ -1,20 +1,15 @@
+import problems.ProblemTest;
+import problems.TestCase;
+import problems.impl.PalindromeProblem;
+
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
 /**
  * Main runner class for executing DSA problem tests
  */
-public class DSAProblemRunner {
-
-    private final ProblemTest<?, ?> problemTest;
-
-    public DSAProblemRunner(ProblemTest<?, ?> problemTest) {
-        this.problemTest = problemTest;
-    }
-
-    public ProblemTest<?, ?> getProblemTest() {
-        return problemTest;
-    }
+public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
 
     /**
      * Run tests for a given problem implementation
@@ -42,23 +37,23 @@ public class DSAProblemRunner {
             TestCase<I, O> testCase = testCases.get(i);
             System.out.println("\n📋 Test Case " + (i + 1) + ":");
 
-            if (!testCase.getDescription().isEmpty()) {
-                System.out.println("   Description: " + testCase.getDescription());
+            if (!testCase.description().isEmpty()) {
+                System.out.println("   Description: " + testCase.description());
             }
 
-            System.out.println("   Input: " + testCase.getInput());
-            System.out.println("   Expected: " + testCase.getExpectedOutput());
+            System.out.println("   Input: " + testCase.input());
+            System.out.println("   Expected: " + testCase.expectedOutput());
 
             try {
                 long startTime = System.nanoTime();
-                O actualOutput = problem.solveProblem(testCase.getInput());
+                O actualOutput = problem.solveProblem(testCase.input());
                 long endTime = System.nanoTime();
                 double executionTime = (endTime - startTime) / 1_000_000.0; // Convert to milliseconds
 
                 System.out.println("   Actual: " + actualOutput);
                 System.out.printf("   Execution Time: %.3f ms%n", executionTime);
 
-                boolean passed = isEqual(testCase.getExpectedOutput(), actualOutput);
+                boolean passed = isEqual(testCase.expectedOutput(), actualOutput);
 
                 if (passed) {
                     System.out.println("   ✅ PASSED");
@@ -100,7 +95,7 @@ public class DSAProblemRunner {
 
         // Handle arrays
         if (expected.getClass().isArray() && actual.getClass().isArray()) {
-            return java.util.Arrays.deepEquals(new Object[]{expected}, new Object[]{actual});
+            return Arrays.deepEquals(new Object[]{expected}, new Object[]{actual});
         }
 
         // Handle regular objects
