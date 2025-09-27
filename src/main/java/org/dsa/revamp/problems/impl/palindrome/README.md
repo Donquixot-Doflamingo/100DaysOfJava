@@ -59,32 +59,65 @@ The output is typically a **boolean** indicating whether the cleaned string is a
 
 ### ✏️ My Solution (Code)
 
-> *(You will write your code solution here)*
-
 ```
-// Your implementation goes here
+@Override
+public Boolean solveProblem(String input) {
+    if (StringUtils.isEmpty(input) || input.length() == 1) {
+        return true;
+    }
+    int i = 0, j = input.length() - 1;
+    while (i < j) {
+        // Move i to the next alphanumeric character
+        while (i < j && !Character.isLetterOrDigit(input.charAt(i))) i++;
+        // Move j to the previous alphanumeric character
+        while (i < j && !Character.isLetterOrDigit(input.charAt(j))) j--;
+
+        if (Character.toLowerCase(input.charAt(i)) != Character.toLowerCase(input.charAt(j))) {
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+}
 ```
 
 ---
 
 ### 🧠 Implementation Logic
 
-> *(Explain the steps your solution follows — without inserting the actual code)*
+1. Use **two pointers**: `i` at the start, `j` at the end of the string.
+2. **Skip non-alphanumeric characters**: Move `i` forward and `j` backward until they point to valid characters.
+3. **Compare characters**: Convert both to lowercase and check equality. If they differ, return `false`.
+4. **Move pointers**: Increment `i` and decrement `j` and repeat.
+5. **Return `true`**: If the loop finishes without mismatches, the string is a palindrome.
 
 ---
 
 ### 🤔 Why I Chose This Approach
 
-> *(Mention why you picked your logic — efficiency, readability, constraints handling, etc.)*
+- **Efficiency**: No need to create a new string with `replaceAll`.
+- **Simplicity**: Single pass with a clear while-loop logic.
+- **Optimal for interviews**: O(n) time and O(1) space.
+- **Edge-case friendly**: Works for empty strings, single-character strings, and strings with only special characters.
 
 ---
 
 ### 📈 Time & Space Complexity
 
-> *(Document the complexity after writing your solution)*
+| Metric             | Complexity | Explanation                                                                                                                            |
+|-------------------|------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| **Time Complexity** | O(n)       | Each character is visited at most once by the two pointers. Skipping non-alphanumeric characters doesn’t change the linear complexity. |
+| **Space Complexity** | O(1)       | Only two pointers and temporary variables are used. No extra strings or data structures are created.                                   |
+
 
 ---
 
 ### ✅ Final Thoughts / Learnings
 
-> *(Add insights or challenges you noticed while solving)*
+- **Two-pointer technique is powerful**: Ideal for symmetric comparison problems like palindromes.
+- **In-place processing saves memory**: Avoid extra strings or arrays.
+- **Reliable character validation**: Use `Character.isLetterOrDigit()` to filter unwanted characters.
+- **Consider edge cases**: Empty strings, single characters, and strings with only special characters.
+
+✅ Overall, this approach is clean, efficient, and widely accepted for coding interviews like LeetCode.

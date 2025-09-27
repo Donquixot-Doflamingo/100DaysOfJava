@@ -1,6 +1,10 @@
 package org.dsa.revamp;
 
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
 import org.dsa.revamp.problems.impl.palindrome.PalindromeProblem;
@@ -12,7 +16,12 @@ import java.util.Objects;
 /**
  * Main runner class for executing DSA problem tests
  */
-public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
+@Slf4j
+@Getter
+@RequiredArgsConstructor
+public class DSAProblemRunner {
+
+    private final ProblemTest<?, ?> problemTest;
 
     /**
      * Run tests for a given problem implementation

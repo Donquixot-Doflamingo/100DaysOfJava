@@ -1,9 +1,13 @@
 package org.dsa.revamp.problems.impl.palindrome;
 
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.dsa.revamp.common.StringUtils;
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Example implementation for String-based problems
@@ -11,6 +15,8 @@ import java.util.*;
  * A phrase is a palindrome if, after converting all uppercase letters into lowercase letters
  * and removing all non-alphanumeric characters, it reads the same forward and backward.
  */
+@Slf4j
+@NoArgsConstructor
 public class PalindromeProblem implements ProblemTest<String, Boolean> {
 
     @Override
@@ -113,13 +119,13 @@ public class PalindromeProblem implements ProblemTest<String, Boolean> {
 
         testCases.add(new TestCase<>(
                 "aa😊",
-                false,
+                true,
                 "Extra emoji at the end breaks palindrome"
         ));
 
         testCases.add(new TestCase<>(
                 "a😊a",
-                false,
+                true,
                 "Emoji in the middle breaks direct equality"
         ));
 
@@ -173,13 +179,23 @@ public class PalindromeProblem implements ProblemTest<String, Boolean> {
 
     @Override
     public Boolean solveProblem(String input) {
-        input = Objects.isNull(input) ? input : input.trim();
-        // return true if the string is empty of the size is 1
-        if (Objects.isNull(input) || input.isEmpty() || input.length() == 1) {
+        if (StringUtils.isEmpty(input) || input.length() == 1) {
             return true;
         }
+        int i = 0, j = input.length() - 1;
+        while (i < j) {
+            // Move i to the next alphanumeric character
+            while (i < j && !Character.isLetterOrDigit(input.charAt(i))) i++;
+            // Move j to the previous alphanumeric character
+            while (i < j && !Character.isLetterOrDigit(input.charAt(j))) j--;
 
-        return false;
+            if (Character.toLowerCase(input.charAt(i)) != Character.toLowerCase(input.charAt(j))) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
     }
 
     @Override
