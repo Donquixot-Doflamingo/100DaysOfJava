@@ -28,11 +28,11 @@ The output is typically a **boolean** indicating whether the cleaned string is a
 ### ✅ Input Examples (Without Solutions)
 
 | Input                            | Expected Output |
-| -------------------------------- | --------------- |
-| "A man, a plan, a canal: Panama" | true/false      |
-| "race a car"                     | true/false      |
-| " "                              | true/false      |
-| "0P"                             | true/false      |
+| -------------------------------- | -------------- |
+| "A man, a plan, a canal: Panama" | true     |
+| "race a car"                     | false     |
+| " "                              | true     |
+| "0P"                             | false     |
 
 ---
 
