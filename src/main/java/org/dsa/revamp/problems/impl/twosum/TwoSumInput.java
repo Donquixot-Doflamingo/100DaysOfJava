@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Input class for Two Sum problem
  */
-record TwoSumInput(int[] nums, int target) {
+public record TwoSumInput(int[] nums, int target) {
 
     @Override
     public String toString() {
