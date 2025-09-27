@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Objects;
 
 import static org.dsa.revamp.common.DSAProblemScanner.runAllProblems;
+import static org.dsa.revamp.common.DSAProblemScanner.runProblemTest;
 
 /**
  * Main runner class for executing DSA problem tests
@@ -114,7 +115,8 @@ public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
      */
     public static void main(String[] args) {
         try {
-            runAllProblems();
+//            runAllProblems();
+            runProblemTest(new TwoSumProblem());
         } catch (Exception e) {
             log.error("❌ Error running tests: {}", e.getMessage(), e);
         }

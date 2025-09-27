@@ -44,7 +44,7 @@ public class DSAProblemScanner {
     }
 
     @SuppressWarnings("unchecked")
-    private static <I, O> void runProblemTest(ProblemTest<?, ?> problem) {
+    public static <I, O> void runProblemTest(ProblemTest<?, ?> problem) {
         // Cast is safe because we're just passing it through
         DSAProblemRunner.runTests((ProblemTest<I, O>) problem);
     }
