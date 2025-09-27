@@ -47,8 +47,8 @@ For each LeetCode problem listed below, the following steps will be taken:
 
 ### I. Array & String Manipulation
 
-* [x] **Two Sum**
 * [x] **Valid Palindrome**
+* [x] **Two Sum**
 * [ ] **Longest Substring Without Repeating Characters**
 * [ ] **3Sum**
 * [ ] **Product of Array Except Self**
