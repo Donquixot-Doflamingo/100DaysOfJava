@@ -1,5 +1,6 @@
 package org.dsa.revamp.problems.impl.twosum;
 
+import org.dsa.revamp.inputs.TwoSumInput;
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
 

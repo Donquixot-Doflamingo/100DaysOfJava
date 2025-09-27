@@ -52,27 +52,7 @@ public class PalindromeProblem implements ProblemTest<String, Boolean> {
     
     @Override
     public Boolean solveProblem(String input) {
-        // Convert to lowercase and keep only alphanumeric characters
-        StringBuilder cleaned = new StringBuilder();
-        for (char c : input.toCharArray()) {
-            if (Character.isLetterOrDigit(c)) {
-                cleaned.append(Character.toLowerCase(c));
-            }
-        }
-        
-        String cleanedStr = cleaned.toString();
-        int left = 0;
-        int right = cleanedStr.length() - 1;
-        
-        while (left < right) {
-            if (cleanedStr.charAt(left) != cleanedStr.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
-        }
-        
-        return true;
+        return false;
     }
     
     @Override

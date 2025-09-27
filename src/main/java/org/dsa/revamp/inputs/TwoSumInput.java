@@ -1,4 +1,4 @@
-package org.dsa.revamp.problems.impl.twosum;
+package org.dsa.revamp.inputs;
 
 import java.util.Arrays;
 
