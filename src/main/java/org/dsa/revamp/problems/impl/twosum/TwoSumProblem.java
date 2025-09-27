@@ -5,6 +5,8 @@ import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Example implementation of problems.ProblemTest interface
@@ -94,7 +96,20 @@ public class TwoSumProblem implements ProblemTest<TwoSumInput, int[]> {
 
     @Override
     public int[] solveProblem(TwoSumInput input) {
-        return null;
+        int[] arr = input.nums();
+        int target = input.target();
+        if (arr.length < 2) {
+            return new int[]{};
+        }
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            int complement = target - arr[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+            map.put(arr[i], i);
+        }
+        return new int[]{};
     }
 
     @Override
