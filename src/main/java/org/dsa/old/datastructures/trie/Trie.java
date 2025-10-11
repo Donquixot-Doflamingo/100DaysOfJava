@@ -51,4 +51,14 @@ public class Trie {
         }
         return true;
     }
+
+    public static int count(Trie trie) {
+        int count = 0;
+        for (int i = 0; i < 26; i++) {
+            if (trie.children[i] != null) {
+                count += count(trie.children[i]);
+            }
+        }
+        return count + 1;
+    }
 }
