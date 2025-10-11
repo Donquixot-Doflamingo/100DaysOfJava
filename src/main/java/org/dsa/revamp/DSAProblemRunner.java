@@ -4,6 +4,7 @@ package org.dsa.revamp;
 import lombok.extern.slf4j.Slf4j;
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
+import org.dsa.revamp.problems.impl.longestsubstring.LongestSubstring;
 import org.dsa.revamp.problems.impl.palindrome.PalindromeProblem;
 import org.dsa.revamp.problems.impl.twosum.TwoSumProblem;
 
@@ -116,7 +117,7 @@ public record DSAProblemRunner(ProblemTest<?, ?> problemTest) {
     public static void main(String[] args) {
         try {
 //            runAllProblems();
-            runProblemTest(new TwoSumProblem());
+            runProblemTest(new LongestSubstring());
         } catch (Exception e) {
             log.error("❌ Error running tests: {}", e.getMessage(), e);
         }

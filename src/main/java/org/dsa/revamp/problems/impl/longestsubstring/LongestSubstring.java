@@ -1,11 +1,13 @@
 package org.dsa.revamp.problems.impl.longestsubstring;
 
+import lombok.extern.slf4j.Slf4j;
+import org.dsa.revamp.common.StringUtils;
 import org.dsa.revamp.problems.ProblemTest;
 import org.dsa.revamp.problems.TestCase;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
+@Slf4j
 public class LongestSubstring implements ProblemTest<String, Integer> {
     @Override
     public List<TestCase<String, Integer>> loadTestCases() {
@@ -87,7 +89,22 @@ public class LongestSubstring implements ProblemTest<String, Integer> {
 
     @Override
     public Integer solveProblem(String input) {
-        return 0;
+        Map<Character, Integer> lastIndex = new HashMap<>();
+        int maxLength = 0, start = 0;
+
+        for (int end = 0; end < input.length(); end++) {
+            char c = input.charAt(end);
+
+            if (lastIndex.containsKey(c) && lastIndex.get(c) >= start) {
+                start = lastIndex.get(c) + 1;
+            }
+
+            lastIndex.put(c, end);
+            maxLength = Math.max(maxLength, end - start + 1);
+            log.info("current char {}, current end {}, current start {}, current max {}, current lastIndex map {}", c, end, start, maxLength, lastIndex);
+        }
+
+        return maxLength;
     }
 
     @Override
