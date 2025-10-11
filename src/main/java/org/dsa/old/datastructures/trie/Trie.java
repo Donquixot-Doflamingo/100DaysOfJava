@@ -1,13 +1,13 @@
 package org.dsa.old.datastructures.trie;
 
 public class Trie {
-    private final Trie[] childs;
+    private final Trie[] children;
     private boolean eow;
 
     public Trie() {
-        childs = new Trie[26];
+        children = new Trie[26];
         for (int i = 0; i < 26; i++) {
-            childs[i] = null;
+            children[i] = null;
         }
     }
 
@@ -15,13 +15,13 @@ public class Trie {
         Trie trie = this;
         for (int i = 0; i < s.length(); i++) {
             int index = s.charAt(i) - 'a';
-            if (trie.childs[index] == null) {
-                trie.childs[index] = new Trie();
+            if (trie.children[index] == null) {
+                trie.children[index] = new Trie();
             }
             if (i == s.length() - 1) {
-                trie.childs[index].eow = true;
+                trie.children[index].eow = true;
             }
-            trie = trie.childs[index];
+            trie = trie.children[index];
         }
     }
 
@@ -29,13 +29,25 @@ public class Trie {
         Trie trie = this;
         for (int i = 0; i < s.length(); i++) {
             int index = s.charAt(i) - 'a';
-            if (trie.childs[index] == null) {
+            if (trie.children[index] == null) {
                 return false;
             }
-            if (i == s.length() - 1 && !trie.childs[index].eow) {
+            if (i == s.length() - 1 && !trie.children[index].eow) {
                 return false;
             }
-            trie = trie.childs[index];
+            trie = trie.children[index];
+        }
+        return true;
+    }
+
+    public boolean prefixSearch(String s) {
+        Trie trie = this;
+        for (int i = 0; i < s.length(); i++) {
+            int index = s.charAt(i) - 'a';
+            if (trie.children[index] == null) {
+                return false;
+            }
+            trie = trie.children[index];
         }
         return true;
     }

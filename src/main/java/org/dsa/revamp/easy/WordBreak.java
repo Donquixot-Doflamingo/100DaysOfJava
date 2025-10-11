@@ -24,13 +24,4 @@ public class WordBreak {
         System.out.println(wordBreak(str));
 
     }
-
-    public static void main(String[] args) {
-        String[] arr = {"i", "love", "samsung", "data", "samsungdata", "datakey"};
-        solution(arr, "ilovesamsung");
-        solution(arr, "ilovesamsungdata");
-        solution(arr, "ilovesamsungdatakey");
-        solution(arr, "ilovedata");
-        solution(arr, "ilovedat");
-    }
 }
