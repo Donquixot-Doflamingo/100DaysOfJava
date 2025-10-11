@@ -4,6 +4,14 @@ public class Trie {
     private final Trie[] children;
     private boolean eow;
 
+    public Trie[] getChildren() {
+        return children;
+    }
+
+    public boolean isEow() {
+        return eow;
+    }
+
     public Trie() {
         children = new Trie[26];
         for (int i = 0; i < 26; i++) {
