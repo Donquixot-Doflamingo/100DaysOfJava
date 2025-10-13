@@ -1,5 +1,7 @@
 package org.dsa.old.datastructures.trie;
 
+import java.util.Map;
+
 public class Trie {
     private final Trie[] children;
     private boolean eow;
@@ -68,5 +70,40 @@ public class Trie {
             }
         }
         return count + 1;
+    }
+
+    public boolean hasSingleChild() {
+        int nonNullCount = 0;
+        for (Trie child : this.getChildren()) {
+            if (child != null) {
+                nonNullCount++;
+                if (nonNullCount > 1) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public Map.Entry<Trie, Integer> getSingleChild() {
+        Trie singleChild = null;
+        int index = -1;
+        int nonNullCount = 0;
+
+        for (int i = 0; i < this.children.length; i++) {
+            Trie child = this.children[i];
+            if (child != null) {
+                nonNullCount++;
+                if (nonNullCount > 1) {
+                    return null; // More than one non-null child
+                }
+                singleChild = child;
+                index = i;
+            }
+        }
+
+        // Return only if exactly one non-null child exists
+        return nonNullCount == 1 ? Map.entry(singleChild, index) : null;
+
     }
 }
